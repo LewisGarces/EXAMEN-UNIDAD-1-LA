@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Expresión Matemática</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert -->
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 class="mb-4">Lenguajes y Autómatas II</h1>
+        <h2 class="mb-4">Árbol de Expresión Matemática</h2>
+
+        <!-- Input para ingresar la expresión -->
+        <div class="form-group">
+            <label for="expresionmate">Ingresa una expresión matemática:</label>
+            <input type="text" id="expresion" class="form-control input-reducido" placeholder="Ej: 8 * 5 / 5">
+        </div>
+
+        <!-- Segundo input (con label arriba) -->
+        <div class="form-group">
+            <label for="recorridoSelect">Selecciona los recorridos a mostrar:</label><br>
+            <select id="recorridoSelect" class="form-control input-reducido custom-select">
+                <option value="id">Seleccionar recorrido</option>
+                <option value="todos">Mostrar Todos</option>
+                <option value="preorden">Preorden</option>
+                <option value="inorden">Inorden</option>
+                <option value="postorden">Postorden</option>
+            </select>
+        </div>
+
+        <button class="btn btn-primary" id="generarBtn">Generar Árbol</button>
+        <button class="btn btn-secondary" id="limpiarBtn">Limpiar Árbol</button>
+
+        <div id="tree" class="mt-4"></div>
+
+        <div class="resultados mt-4">
+            <div class="recorrido">
+                <h4>Preorden</h4>
+                <div id="preorden"></div>
+            </div>
+            <div class="recorrido">
+                <h4>Inorden</h4>
+                <div id="inorden"></div>
+            </div>
+            <div class="recorrido">
+                <h4>Postorden</h4>
+                <div id="postorden"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
